@@ -32,7 +32,7 @@ function Media() {
   );
 }
 
-function Time({ format = "%H:%M - %A %e." }) {
+function Time({ format = "%Y年%m月%d日 %H:%M:%S %A" }) {
   const time = Variable<string>("").poll(
     1000,
     () => GLib.DateTime.new_now_local().format(format)!,
